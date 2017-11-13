@@ -3,17 +3,12 @@
   <head>
   </head>
   <body>
-    <div id="main"></div>
+    <div id="main" onkeydown='printKey(event)'></div>
   </body>
   <script type="text/javascript">
-    var controlObj={
-      printKey: function(event){
-        var output = document.getElementById('main');
-        output.innerHTML = event.key;
-      }
-    
-    };
-    controlObj.addEventListener('keyboard',controlObj.printKey(event));
-    
+    var printKey = function(event){
+      var output = document.getElementById('main');
+      output.innerHTML = event.key;
+    }
   </script>
 </html>
