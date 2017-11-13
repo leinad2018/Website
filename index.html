@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="MainStyle.css">
   </head>
   <body>
-    <h1>My First Website</h1>
-    <p>This is my first website, made in html</p>
+    <div id="main"></div>
   </body>
+  <script type="text/javascript">
+    var controlObj={
+      printKey: function(event){
+        var output = document.getElementById('main');
+        output.innerHTML = event.key;
+      }
+    
+    };
+    controlObj.addEventListener('keyboard',controlObj.printKey(event));
+    
+  </script>
 </html>
