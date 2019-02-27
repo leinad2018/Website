@@ -3,12 +3,19 @@
   <head>
   </head>
   <body>
-    <div id="main" onkeydown='printKey(event)'>start</div>
+    <div>
+      <h1>Countdown to Katie!</h1>
+      <div id="timer"></div>
+    </div>
   </body>
   <script type="text/javascript">
-    var printKey = function(event){
-      var output = document.getElementById('main');
-      output.innerHTML = event.key;
+    let output = document.getElementById('timer');
+    function updateClock(){
+      let time = new Date();
+      let day = time.getDays();
+      let hour = time.getHours();
+      let min = time.getMinutes();
+      output.innerHTML = "test";
     }
   </script>
 </html>
